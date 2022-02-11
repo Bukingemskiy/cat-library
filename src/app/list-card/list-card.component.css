@@ -35,9 +35,6 @@
   font-size: 3vmin;
   line-height: 1.2;
   text-shadow: 0 0 .2vmin white ;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .card__like-container {
