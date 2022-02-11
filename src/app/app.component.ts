@@ -14,11 +14,12 @@ export interface Card {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  shironeko = "../../assets/Shironeko.jpg"
   table = false
   cell = true
 
   initialCards = [
-    { title: "Shironeko", description: "Самый счастливый и сонный кот в мире", image: "../../assets/Shironeko.jpg" },
+    { title: "Shironeko", description: "Самый счастливый и сонный кот в мире", image: this.shironeko },
     { title: "Garfi", description: "Самый злой кот в мире", image: "../../assets/Garfi.jpg" },
     { title: "Sam", description: "У кота Сэма есть потрясающие брови", image: "../../assets/Sam.jpg" },
     { title: "Snoopy", description: "Самый очаровательный котик", image: "../../assets/Snoopy.jpg" },
