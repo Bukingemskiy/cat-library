@@ -1,0 +1,31 @@
+.main {
+  padding: 0 5vmin 8vmin;
+}
+
+.main__links {
+  color: gray;
+  display: flex;
+  justify-content: center;
+  padding: 2vmin 0 3vmin;
+}
+
+.main__link {
+  margin-right: 3vmin;
+  cursor: pointer;
+  text-shadow: .1vmin .1vmin .3vmin gray;
+}
+
+.main__link:hover {
+  opacity: .7;
+}
+
+.main__link_active {
+  border-bottom: steelblue .5vmin solid;
+}
+
+.main__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 33vmin);
+  gap: 8vmin;
+  justify-content: center;
+}

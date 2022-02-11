@@ -1,0 +1,8 @@
+<section class="card">
+  <img class="card__image" src="{{card.image}}">
+  <div class="card__container">
+    <h2 class="card__title">{{card.title}}</h2>
+    <div class="card__like" (click)="card.liked = !card.liked" [ngClass]="{card__like_active: card.liked}">
+    </div>
+  </div>
+</section>
