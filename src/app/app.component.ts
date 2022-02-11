@@ -14,23 +14,22 @@ export interface Card {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  shironeko = "../../assets/Shironeko.jpg"
   table = false
   cell = true
 
   initialCards = [
-    { title: "Shironeko", description: "Самый счастливый и сонный кот в мире", image: this.shironeko },
-    { title: "Garfi", description: "Самый злой кот в мире", image: "../../assets/Garfi.jpg" },
-    { title: "Sam", description: "У кота Сэма есть потрясающие брови", image: "../../assets/Sam.jpg" },
-    { title: "Snoopy", description: "Самый очаровательный котик", image: "../../assets/Snoopy.jpg" },
-    { title: "Venus", description: "Кошка с двумя лицами", image: "../../assets/Venus.jpg" },
-    { title: "Maru", description: "Повелитель коробок", image: "../../assets/Maru.jpg" },
-    { title: "Lil Bub", description: "Вечный котёнок", image: "../../assets/Lil_Bub.jpg" },
-    { title: "Banye", description: "Всегда удивлённый кот", image: "../../assets/Banye.jpg" },
-    { title: "Grumpy Cat", description: "Сердитый котик", image: "../../assets/Grumpy_Cat.jpg" },
-    { title: "Hamilton", description: "Кот-хипстер", image: "../../assets/Hamilton.jpg" },
-    { title: "Nala", description: "Кошка, которая всегда в шоке", image: "../../assets/Nala.jpg" },
-    { title: "Colonel Meow", description: "Кот с самой длинной шерстью", image: "../../assets/Colonel_Meow.jpg" }
+    { title: "Shironeko", description: "Самый счастливый и сонный кот в мире", image: "assets/Shironeko.jpg" },
+    { title: "Garfi", description: "Самый злой кот в мире", image: "assets/Garfi.jpg" },
+    { title: "Sam", description: "У кота Сэма есть потрясающие брови", image: "assets/Sam.jpg" },
+    { title: "Snoopy", description: "Самый очаровательный котик", image: "assets/Snoopy.jpg" },
+    { title: "Venus", description: "Кошка с двумя лицами", image: "assets/Venus.jpg" },
+    { title: "Maru", description: "Повелитель коробок", image: "assets/Maru.jpg" },
+    { title: "Lil Bub", description: "Вечный котёнок", image: "assets/Lil_Bub.jpg" },
+    { title: "Banye", description: "Всегда удивлённый кот", image: "assets/Banye.jpg" },
+    { title: "Grumpy Cat", description: "Сердитый котик", image: "assets/Grumpy_Cat.jpg" },
+    { title: "Hamilton", description: "Кот-хипстер", image: "assets/Hamilton.jpg" },
+    { title: "Nala", description: "Кошка, которая всегда в шоке", image: "assets/Nala.jpg" },
+    { title: "Colonel Meow", description: "Кот с самой длинной шерстью", image: "assets/Colonel_Meow.jpg" }
   ]
 
   newCards: Card[] =
