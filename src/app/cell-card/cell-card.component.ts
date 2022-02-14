@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Card } from '../app.component';
+import { Component, Input } from '@angular/core'
+import { Card } from '../app.component'
 
 @Component({
   selector: 'app-cell-card',
@@ -7,11 +7,9 @@ import { Card } from '../app.component';
   styleUrls: ['./cell-card.component.css']
 })
 
-export class CellCardComponent implements OnInit {
+export class CellCardComponent {
 
   @Input()
   card!: Card;
-
-  ngOnInit() { }
 
 }

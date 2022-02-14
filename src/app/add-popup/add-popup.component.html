@@ -1,0 +1,25 @@
+<div class="add-popup">
+  <div class=" add-popup__content">
+    <button class="add-popup__close-button" type="button" aria-label="Закрыть" (click)="closePopup()"></button>
+    <h2 class=" add-popup__title">Новый котик</h2>
+    <form class="add-popup__form">
+      <section class="add-popup__section">
+        <input class="add-popup__input" placeholder="Имя" type="text" name="title" [(ngModel)]="title"
+          (input)="formValidator()" minlength="2" maxlength="30" required id="title">
+        <span class="add-popup__input-error" id="title-error">В этом поле должно быть от 2 до 30 символов</span>
+      </section>
+      <section class="add-popup__section">
+        <input class="add-popup__input" placeholder="Описание" type="text" name="description" [(ngModel)]="description"
+          (input)="formValidator()" minlength="4" maxlength="80" required id="description">
+        <span class="add-popup__input-error" id="description-error">В этом поле должно быть от 4 до 80 символов</span>
+      </section>
+      <section class="add-popup__section">
+        <input class="add-popup__input" placeholder="Ссылка на фото" type="url" name="image" [(ngModel)]="image"
+          (input)="formValidator()" required id="image">
+        <span class="add-popup__input-error" id="image-error">В этом поле должна быть корректная ссылка</span>
+      </section>
+      <button class="add-popup__save-button" type="submit" disabled="disabled">Добавить
+        котика</button>
+    </form>
+  </div>
+</div>

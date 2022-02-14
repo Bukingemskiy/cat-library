@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+
 
 export interface Card {
   id: number
@@ -14,8 +15,11 @@ export interface Card {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  table = false
+
+  addPopup = false
+  list = false
   cell = true
+  cards = []
 
   initialCards = [
     { title: "Shironeko", description: "Самый счастливый и сонный кот в мире", image: "assets/Shironeko.jpg" },
@@ -37,11 +41,25 @@ export class AppComponent {
 
   cellCards() {
     this.cell = true
-    this.table = false
+    this.list = false
   }
 
-  tableCards() {
+  listCards() {
     this.cell = false
-    this.table = true
+    this.list = true
+  }
+
+  openPopup() {
+    this.addPopup = true
+  }
+
+  closePopup() {
+    this.addPopup = false
+  }
+
+  addCard(newItem: any) {
+    this.initialCards.push({ title: newItem.target[0].value, description: newItem.target[1].value, image: newItem.target[2].value })
+    this.newCards = this.initialCards.map((obj, i) => ({ ...obj, liked: false, id: i + 1 }))
+    this.closePopup()
   }
 }

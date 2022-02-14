@@ -5,14 +5,22 @@
 .main__links {
   color: gray;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   padding: 2vmin 0 3vmin;
 }
 
+.main__links-container {
+  display: flex;
+  margin: 0 auto 2.5vmin;
+}
+
 .main__link {
+  display: inline-flex;
   margin-right: 2.5vmin;
   cursor: pointer;
   text-shadow: .1vmin .1vmin .3vmin gray;
+  font-size: 2.5vmin;
+  line-height: 1.2;
 }
 
 .main__link:hover {
@@ -21,6 +29,21 @@
 
 .main__link_active {
   border-bottom: steelblue .5vmin solid;
+}
+
+.main__add-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.main__add-button {
+  background-image: url(../assets/Add.svg);
+  background-color: gray;
+  background-size: cover;
+  width: 2.5vmin;
+  height: 2.5vmin;
+  border-radius: .8vmin;
+  margin-right: 1vmin;
 }
 
 .main__grid {

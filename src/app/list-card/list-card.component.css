@@ -27,6 +27,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  max-width: calc(100vw - 50vmin);
 }
 
 .card__description {
@@ -35,6 +36,8 @@
   font-size: 3vmin;
   line-height: 1.2;
   text-shadow: 0 0 .2vmin white ;
+  overflow: hidden;
+  max-height: 10vmin;
 }
 
 .card__like-container {
