@@ -1,0 +1,14 @@
+<section class="card">
+  <img class="card__image" src="{{card.image}}">
+  <div class="card__text">
+    <div class="card__container">
+      <h2 class="card__title">{{card.title}}</h2>
+      <div class="card__icon" id="favorite" (click)="toggleLike.emit(card)" [ngClass]="{card__icon_active: card.liked}"></div>
+    </div>
+    <p class="card__description">{{card.description}}</p>
+  </div>
+  <div class="card__icons">
+    <div class="card__icon" id="edit" routerLink="/edit/{{card.id}}"></div>
+    <div class="card__icon" id="delete" (click)="delete.emit(card.id)"></div>
+  </div>
+</section>

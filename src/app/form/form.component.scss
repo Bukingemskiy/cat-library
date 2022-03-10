@@ -1,0 +1,100 @@
+.form {
+  margin: 36px auto 36px 60px;
+  color: #434652;
+}
+
+.form__back-button {
+  width: 97px;
+  height: 36px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 36px;
+  font-weight: 500;
+  text-align: end;
+  color: #434652;
+  border: 1px solid #C4C7D1;
+  border-radius: 2px;
+  padding-right: 15px;
+  margin-bottom: 8px;
+  background-image: url(../../assets/Back.svg);
+  background-repeat: no-repeat;
+  background-position-x: 13px;
+  background-position-y: center;
+
+  &:hover {
+      opacity: 0.6;
+  }
+}
+
+.form__container {
+  width: 534px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__title {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.form__input {
+  padding: 8px;
+  width: 534px;
+  height: 38px;
+  border: 1px solid #C4C7D1;
+  border-radius: 2px;
+  outline: none;
+
+  &#description {
+    height: 78px;
+  }
+
+  &.ng-invalid:not(.form).ng-touched {
+    border: 1px solid red;
+  }
+
+  &.ng-valid:not(.form).ng-touched {
+    border: 1px solid #C4C7D1;
+  }
+}
+
+.form__input_error {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 5px;
+}
+
+.form__input_error-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form__add-button {
+  width: 88px;
+  height: 36px;
+  background-color: #21A5B9;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #fff;
+  border: 1px solid #21A5B9;
+  border-radius: 2px;
+  margin-top: 40px;
+  padding: 0;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

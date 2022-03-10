@@ -1,0 +1,9 @@
+<app-header></app-header>
+<nav-root></nav-root>
+<div class="grid" *ngIf="path === '/cell'">
+  <card-cell *ngFor="let iterCard of cards$ | async" [card] = "iterCard" (delete)="delete($event)" (toggleLike)="toggleLike($event)"></card-cell>
+</div>
+
+<div class="flex" *ngIf="path === '/list'">
+  <card-list *ngFor="let iterCard of cards$ | async" [card] = "iterCard" (delete)="delete($event)" (toggleLike)="toggleLike($event)"></card-list>
+</div>

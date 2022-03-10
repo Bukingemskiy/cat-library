@@ -1,0 +1,74 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #434652;
+  height: 140px;
+  border-top: 1px solid #D3D4DB;
+}
+
+.card__image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: auto 0;
+}
+
+.card__text {
+  margin: 48.5px auto 44px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__container {
+  display: flex;
+  align-items: center;
+}
+
+.card__title {
+  margin: 0 15px 0 0;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+}
+
+.card__icon {
+  width: 14px;
+  height: 14px;
+  background-image: url('../../../assets/Favorite_off.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  transition: transform linear .1s;
+
+  &#edit {
+    background-image: url('../../../assets/Edit.svg');
+  }
+
+  &#delete {
+    margin-right: 7px;
+    margin-left: 46px;
+    background-image: url('../../../assets/Delete.svg');
+  }
+
+  &:hover {
+    transform: scale(1.15, 1.15);
+  }
+
+  &_active {
+    background-image: url('../../../assets/Favorite_on.svg');
+  }
+}
+
+.card__description {
+  color: #757986;
+  margin: 12.5px 0 0;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card__icons {
+  display: flex;
+  align-items: center;
+}

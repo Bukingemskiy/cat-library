@@ -1,25 +1,2 @@
-<app-header></app-header>
-<section class="main">
-  <div class="main__links">
-    <div class="main__links-container">
-      <a class="main__link" [ngClass]="{main__link_active: cell}" (click)="cellCards()">ПЛИТКА</a>
-      <a class="main__link" [ngClass]="{main__link_active: list}" (click)="listCards()">ТАБЛИЦА</a>
-    </div>
-    <div class="main__add-container">
-      <a class="main__link" (click)="openPopup()">
-        <div class="main__add-button"></div>
-        ДОБАВИТЬ КОТИКА
-      </a>
-    </div>
-  </div>
-  <div class="main__flex" *ngIf="list">
-    <app-list-card *ngFor="let iterCard of newCards" [card]="iterCard">
-    </app-list-card>
-  </div>
-  <div class="main__grid" *ngIf="cell">
-    <app-cell-card *ngFor="let iterCard of newCards" [card]="iterCard">
-    </app-cell-card>
-  </div>
-</section>
+<router-outlet></router-outlet>
 <app-footer></app-footer>
-<app-add-popup *ngIf="addPopup" (submit)="addCard($event)" (close)="closePopup()"></app-add-popup>

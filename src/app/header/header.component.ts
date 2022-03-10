@@ -1,11 +1,18 @@
 import { Component } from '@angular/core'
+import { ActivatedRoute} from '@angular/router'
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 
 export class HeaderComponent {
+
+title = ''
+
+constructor(private route: ActivatedRoute) { 
+  this.title = route.snapshot.data['title'];
+ };
 
 }

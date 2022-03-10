@@ -1,27 +1,25 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { FormsModule } from '@angular/forms'
+import { AppRoutingModule } from './routing/routing.module'
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools'
+import { environment } from 'src/environments/environment'
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component'
-import { HeaderComponent } from './header/header.component'
-import { ListCardComponent } from './list-card/list-card.component'
-import { CellCardComponent } from './cell-card/cell-card.component'
 import { FooterComponent } from './footer/footer.component'
-import { AddPopupComponent } from './add-popup/add-popup.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    ListCardComponent,
-    CellCardComponent,
-    FooterComponent,
-    AddPopupComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    environment.production ? [] : AkitaNgDevtools.forRoot(),
+    AppRoutingModule,
+    HttpClientModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

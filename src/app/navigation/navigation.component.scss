@@ -1,15 +1,15 @@
-.main {
+.navigation {
   padding: 0 60px;
   color: #434652;
 }
 
-.main__buttons {
+.navigation__buttons {
   display: flex;
   justify-content: space-between;
   padding: 36px 0 16px;
 }
 
-.main__button {
+.navigation__button {
   width: 69px;
   height: 36px;
   background-color: #fff;
@@ -21,9 +21,13 @@
   border-radius: 2px 0px 0px 2px;
   margin: 0;
   padding: 0;
+
+  &:hover {
+    opacity: .7;
+  }
 }
 
-.main__create-button {
+.navigation__create-button {
   width: 96px;
   height: 36px;
   background-color: #21A5B9;
@@ -38,10 +42,6 @@
   padding: 0;
 }
 
-.main__button:hover {
-  opacity: .7;
-}
-
-.main__button_active {
+.navigation__button_active {
   background: linear-gradient(180deg, #F3F3F5 0%, #D8DAE0 100%);
 }

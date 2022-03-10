@@ -1,0 +1,23 @@
+<app-header></app-header>
+<section class="form" [formGroup]="cityForm">
+  <button class="form__back-button" type="button" (click)="backClicked()">Назад</button>
+  <div class="form__container">
+    <h2 class="form__title">Название города</h2>
+    <input type="text" class="form__input" formControlName="title">
+    <span *ngIf="cityForm.get('title')?.invalid && cityForm.get('title')?.touched" class="form__input_error">Это обязательное поле</span>
+  </div>
+  <div class="form__container">
+    <h2 class="form__title">Описание города</h2>
+    <input type="text" class="form__input" formControlName="description" id="description">
+    <span *ngIf="cityForm.get('description')?.invalid && cityForm.get('description')?.touched" class="form__input_error">Это обязательное поле</span>
+  </div>
+  <div class="form__container">
+    <h2 class="form__title" id="link">Ссылка на фото</h2>
+    <input type="text" class="form__input" formControlName="image">
+    <div *ngIf="cityForm.get('image')?.invalid && cityForm.get('image')?.touched" class="form__input_error-container">
+      <span class="form__input_error" *ngIf="cityForm.get('image')?.errors?.['required']">Это обязательное поле</span>
+      <span class="form__input_error" *ngIf="cityForm.get('image')?.errors?.['pattern']">Введите корректную ссылку</span>
+    </div>
+  </div>
+  <button class="form__add-button" (click)="submit()" [disabled]="cityForm.invalid" type="submit">{{buttonText}}</button>
+</section>

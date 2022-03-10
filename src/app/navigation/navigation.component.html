@@ -1,0 +1,9 @@
+<section class="navigation">
+  <div class="navigation__buttons">
+    <div class="navigation__container">
+      <button class="navigation__button" routerLink="/list" [ngClass]="{navigation__button_active: path === '/list'}">Список</button>
+      <button class="navigation__button" routerLink="/cell" [ngClass]="{navigation__button_active: path === '/cell'}">Плитка</button>
+    </div>
+    <button class="navigation__create-button" routerLink="/create">Создать</button>
+  </div>
+</section>
